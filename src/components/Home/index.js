@@ -88,7 +88,6 @@ class Home extends Component {
         type="button"
         className="failure-button"
         onClick={this.getItemsData}
-        role="button"
       >
         Retry
       </button>
@@ -104,8 +103,12 @@ class Home extends Component {
   )
 
   renderSuccessView = () => {
-    const {itemsList, selectedCategory, restaurantName, dishQuantities} =
-      this.state
+    const {
+      itemsList,
+      selectedCategory,
+      restaurantName,
+      dishQuantities,
+    } = this.state
     const items = itemsList.length ? itemsList : []
 
     const selectedCategoryList = items.find(
@@ -159,7 +162,6 @@ class Home extends Component {
                             ? 'active'
                             : ''
                         }`}
-                        role="button"
                         data-testid={`category-button-${each.menu_category}`}
                       >
                         {each.menu_category}
@@ -194,7 +196,6 @@ class Home extends Component {
                                 type="button"
                                 className="quantity-button"
                                 onClick={() => onDecrement(each.dish_id)}
-                                role="button"
                                 data-testid={`decrement-button-${each.dish_id}`}
                               >
                                 -
@@ -209,7 +210,6 @@ class Home extends Component {
                                 type="button"
                                 className="quantity-button"
                                 onClick={() => onIncrement(each.dish_id)}
-                                role="button"
                                 data-testid={`increment-button-${each.dish_id}`}
                               >
                                 +
@@ -221,7 +221,6 @@ class Home extends Component {
                                 type="button"
                                 className="add-to-cart-button"
                                 onClick={() => onClickAddToCart(each)}
-                                role="button"
                                 data-testid={`add-to-cart-button-${each.dish_id}`}
                               >
                                 ADD TO CART

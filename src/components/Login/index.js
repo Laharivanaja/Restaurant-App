@@ -75,7 +75,7 @@ class Login extends Component {
             placeholder="Password"
             id="password"
           />
-          <button type="submit" className="login-button" role="button">
+          <button type="submit" className="login-button">
             Login
           </button>
           {showError && <p className="error-message">{errorMsg}</p>}

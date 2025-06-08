@@ -25,7 +25,7 @@ class Cart extends Component {
 
           const getTotalAmount = () =>
             cartList.reduce(
-              (acc, each) => acc + each.dish_price * each.quantity,
+              (acc, each) => acc + each.dishPrice * each.quantity,
               0,
             )
 
@@ -43,15 +43,14 @@ class Cart extends Component {
                         type="button"
                         className="remove-all-button"
                         onClick={removeAllCartItems}
-                        role="button"
-                        data-testid="remove-all-button" // Already present and good
+                        data-testid="remove-all-button"
                       >
                         Remove All
                       </button>
                     </div>
                     <ul className="cart-items-list">
                       {cartList.map(each => (
-                        <CartItem key={each.dish_id} itemDetails={each} />
+                        <CartItem key={each.dishId} itemDetails={each} />
                       ))}
                     </ul>
                     <div className="total-amount-container">

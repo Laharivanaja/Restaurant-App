@@ -34,7 +34,6 @@ const Header = props => {
                   {/* ADDED data-testid="cart" here */}
                   <button
                     type="button"
-                    role="button"
                     data-testid="cart-icon-button"
                     className="cart-button"
                   >
@@ -50,7 +49,6 @@ const Header = props => {
                   type="button"
                   className="logout-button"
                   onClick={onClickLogout}
-                  role="button"
                 >
                   Logout
                 </button>

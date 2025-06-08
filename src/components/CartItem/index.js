@@ -9,35 +9,33 @@ class CartItem extends Component {
         {value => {
           const {incrementCartItemQuantity, decrementCartItemQuantity} = value
           const {itemDetails} = this.props
-          const {dish_id, dish_name, dish_image, dish_price, quantity} =
-            itemDetails
+          const {dishId, dishName, dishImage, dishPrice, quantity} = itemDetails
 
           const onIncrement = () => {
-            incrementCartItemQuantity(dish_id)
+            incrementCartItemQuantity(dishId)
           }
 
           const onDecrement = () => {
-            decrementCartItemQuantity(dish_id)
+            decrementCartItemQuantity(dishId)
           }
 
           return (
             <li className="cart-item">
               <img
-                src={dish_image}
-                alt={dish_name}
+                src={dishImage}
+                alt={dishName}
                 className="cart-item-image"
-                data-testid="dishImage" // Already present and good
+                data-testid="dishImage"
               />
               <div className="cart-item-details">
                 <h1 className="cart-item-title" data-testid="dishName">
-                  {dish_name}
+                  {dishName}
                 </h1>
                 <div className="quantity-controller">
                   <button
                     type="button"
                     onClick={onDecrement}
-                    role="button"
-                    data-testid="decrement-button" // Already present and good
+                    data-testid="decrement-button"
                     className="quantity-button"
                   >
                     -
@@ -48,14 +46,13 @@ class CartItem extends Component {
                   <button
                     type="button"
                     onClick={onIncrement}
-                    role="button"
-                    data-testid="increment-button" // Already present and good
+                    data-testid="increment-button"
                     className="quantity-button"
                   >
                     +
                   </button>
                 </div>
-                <p className="cart-item-price">₹{dish_price * quantity}</p>
+                <p className="cart-item-price">₹{dishPrice * quantity}</p>
               </div>
             </li>
           )
