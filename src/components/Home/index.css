@@ -1,0 +1,106 @@
+.home-container {
+  background-color: #f0f0f0;
+  min-height: 100vh;
+}
+
+.home-content {
+  padding: 20px;
+}
+
+.restaurant-heading {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.category-slider {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  list-style-type: none;
+  padding: 0;
+}
+
+.category-button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  background-color: #e0e0e0;
+  cursor: pointer;
+}
+
+.category-button.active {
+  background-color: #6200ea;
+  color: #fff;
+}
+
+.item-container {
+  background-color: #fff;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.veg-nonveg-indicator {
+  font-size: 28px;
+  color: green;
+}
+
+.veg-nonveg-indicator.non-veg {
+  color: red;
+}
+
+.dish-text {
+  flex: 1;
+}
+
+.dish-name {
+  font-size: 18px;
+  margin: 0;
+}
+
+.dish-price {
+  color: #333;
+}
+
+.dish-description {
+  color: #666;
+  margin: 5px 0;
+}
+
+.add-to-cart-button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+.add-to-cart-button:hover {
+  background-color: #388e3c;
+}
+
+.customization {
+  color: #ff9800;
+  margin-top: 6px;
+}
+
+.not-available {
+  color: #f44336;
+}
+
+.dish-calories {
+  font-size: 12px;
+  color: #999;
+}
+
+.dish-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+}
